@@ -1,0 +1,22 @@
+.atcSection{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.insideAtcSection{
+    position: absolute;
+    padding: 5px;
+    right: 0;
+    top: 0;
+    width:25%;
+    height:100vh;
+    background-color: aliceblue;
+}
+
+img-container{
+    display: flex;
+    
+}

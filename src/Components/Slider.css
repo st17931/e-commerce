@@ -1,0 +1,135 @@
+.banner{
+    display: flex;
+    
+}
+.banner-content{
+    padding: 0px 50px;
+    margin-top: 50px;
+}
+.banner .col-7 img{
+    max-width: 100%;
+}
+.banner .col-5{
+    background: #f7f9f1;
+    /* padding: 80px 30px ; */
+    text-align: center;
+}
+.banner .col-5 .banner-about,.sub-title{
+    color: #777777;
+    font-size: 14px;
+    font-family: sans-serif;
+}
+.banner .banner-btn{
+    border: none;
+    background:none;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+.fav{
+    display: flex;
+
+}
+.fav-responsive{
+    display: flex;
+}
+.gallary{
+    display: flex;
+    margin-top: 90px;
+}
+.gallary img{
+    max-width: 100%;
+}
+.gallary-responsive{
+    display: flex;
+}
+
+/* gallary animation */
+.gallary .col{
+    position: relative;
+    overflow: hidden;
+}
+.gallary .col img{
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+.gallary .col::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    width: 0%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background-color 0.3s ease; 
+    opacity: 0;
+    transition: .9s;
+
+}
+.fav .col:hover{
+    text-decoration: underline;
+}
+.gallary .col:hover::after{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    transition: .5s;
+    opacity: 1;
+
+}
+.features-block{
+ 
+        perspective: 1000px; /* Perspective for 3D effect */
+    
+}
+.features-block img{
+    transition: transform 0.5s;
+}
+.features-block:hover img{
+    transform: rotateY(360deg); /* Rotate 360 degrees around Y-axis on hover */
+}
+.banner .col-7 img{
+    transition: transform 4s; 
+}
+.banner .col-7{
+    overflow: hidden; /* Hide overflow content */
+   
+}
+
+.banner .col-7:hover img{
+    transform: scale(1.2); /* Zoom the image by 1.2 times on hover */
+
+}
+@media only screen and (min-width: 280px) and (max-width: 720px) {
+
+    .banner2{
+        flex-direction: column-reverse;
+    }
+    .banner-content{
+        padding: 30px 30px;
+        margin-top: 0px;
+      
+    }
+    .fav-responsive{
+       flex-direction: column;
+    }
+    .gallary{
+        flex-direction: column;
+    }
+    .gallary-responsive{
+        display: flex;
+    }
+}
+@media only screen and (min-width: 720px) and (max-width: 1279px) {
+
+    .banner-content{
+        margin: 0;
+        padding: 0;
+      
+    }
+    
+
+}
